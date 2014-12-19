@@ -1,0 +1,14 @@
+<%= form_for([@restaurant, @restaurant.reviews.build]) do |f| %>
+
+<p>
+  <%= f.label :rating %><br>
+  <%= f.text_field :rating, placeholder: "(rating 1-5)" %>
+</p>
+<p>
+  <%= f.label :body %><br>
+  <%= f.text_area :body, placeholder: "(required)" %>
+</p>
+<p>
+  <%= f.submit 'Add Review'%>
+</p>
+<% end %>
